@@ -24,14 +24,16 @@ function readingList(books) {
     liElement.style.paddingLeft = "20px";
     liElement.style.paddingBottom = "20px";
     liElement.style.paddingTop = "5px";
+    liElement.style.maxHeight = "580px";
 
     
     ulElement.appendChild(liElement);
     liElement.appendChild(pElement);
     liElement.appendChild(imgElement);
+    
 
     
-    if (book.alreadyRead === true) {
+    if (book.alreadyRead) {
       liElement.style.backgroundColor = "green";
     } else if (book.alreadyRead === false) {
       liElement.style.backgroundColor = "red";
